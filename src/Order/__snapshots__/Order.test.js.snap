@@ -43,30 +43,6 @@ exports[`Order.js render fakeOrder[0] snapshot 1`] = `
 </div>
 `;
 
-exports[`Order.js render order without items snapshot 1`] = `
-<div
-  className="Order"
->
-  <div
-    className="Order-header"
-  >
-    <span
-      className="Order-shop"
-    >
-      Alihandro Express
-    </span>
-    <span
-      id="date"
-    >
-      31 февраля, чт, 2007 год
-    </span>
-  </div>
-  <div
-    className="Order-items"
-  />
-</div>
-`;
-
 exports[`Order.js render with items null in data 1`] = `
 <div
   className="Order"
