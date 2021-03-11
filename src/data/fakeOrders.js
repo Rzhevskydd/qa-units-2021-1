@@ -1,4 +1,4 @@
-export const fakeOrders = [
+const fakeOrders = [
 	{
 		id: 123,
 		date: 1544356800000,
@@ -30,3 +30,14 @@ export const fakeOrders = [
 		]
 	},
 ];
+
+const it1 = {items: ['item1', 'item2']}
+const it2 = {items: ['1', '2', '3']}
+let myFakeOrders = [it1, it2]
+
+export {
+	fakeOrders,
+	it1,
+	it2,
+	myFakeOrders
+}

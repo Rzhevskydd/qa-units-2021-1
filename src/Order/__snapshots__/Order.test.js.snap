@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Order.js render fakeOrder[0] snapshot 1`] = `
+<div
+  className="Order"
+>
+  <div
+    className="Order-header"
+  >
+    <span
+      className="Order-shop"
+    >
+      Alihandro Express
+    </span>
+    <span
+      id="date"
+    >
+      31 февраля, чт, 2007 год
+    </span>
+  </div>
+  <div
+    className="Order-items"
+  >
+    <div
+      className="Order-item"
+      key="0"
+    >
+      Утиный пластмасса для показ новый год
+    </div>
+    <div
+      className="Order-item"
+      key="1"
+    >
+      Курица из нержавеющей стали, утка, гусь, голубь, питьевой фонтан
+    </div>
+    <div
+      className="Order-item"
+      key="2"
+    >
+      Новый стиль один розница яйцо для упаковки форма латекс
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Order.js render order without items snapshot 1`] = `
+<div
+  className="Order"
+>
+  <div
+    className="Order-header"
+  >
+    <span
+      className="Order-shop"
+    >
+      Alihandro Express
+    </span>
+    <span
+      id="date"
+    >
+      31 февраля, чт, 2007 год
+    </span>
+  </div>
+  <div
+    className="Order-items"
+  />
+</div>
+`;
+
+exports[`Order.js render with items null in data 1`] = `
+<div
+  className="Order"
+>
+  <div
+    className="Order-header"
+  >
+    <span
+      className="Order-shop"
+    >
+      Alihandro Express
+    </span>
+    <span
+      id="date"
+    >
+      31 февраля, чт, 2007 год
+    </span>
+  </div>
+  <div
+    className="Order-items"
+  />
+</div>
+`;
+
+exports[`Order.js render with null props in data 1`] = `""`;
