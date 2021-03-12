@@ -66,5 +66,3 @@ exports[`Order.js render with items null in data 1`] = `
   />
 </div>
 `;
-
-exports[`Order.js render with null props in data 1`] = `""`;
