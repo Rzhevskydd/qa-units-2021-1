@@ -18,12 +18,13 @@ const it1 = {items: ['item1', 'item2']}
 const it2 = {items: ['1', '2', '3']}
 let orders = [it1, it2]
 
+let fakeOrder = Object.assign({}, fakeOrders[0]);
 
 describe('Order.js', () => {
 
   beforeEach(() => {
-    jest.resetModules();
     getDate.mockReturnValue('31 февраля, чт, 2007 год');
+    fakeOrder = Object.assign({}, fakeOrders[0]);
   });
   afterAll(() => {
     jest.resetModules();
@@ -48,9 +49,7 @@ describe('Order.js', () => {
   });
 
   it('render with items null in data', () => {
-    const fakeOrder = Object.assign({}, fakeOrders[0]);
     fakeOrder.items = null
-
 
     const wrapper = shallow(<Order order={fakeOrder}/>);
     expect(getDate).toHaveBeenCalledTimes(1);
