@@ -54,10 +54,11 @@ describe('sortOrders function', () => {
 	});
 
 	it('sortFunction param is undefined', () => {
-		const stubFn = jest.fn()
-		sortOrders(myFakeOrders, null);
+		const stubFunc = null;
+		const copyFakeOrders = myFakeOrders.map(a => Object.assign({}, a));
+		sortOrders(myFakeOrders, stubFunc);
 
-		expect(stubFn).not.toHaveBeenCalled();
+		expect(myFakeOrders).toEqual(copyFakeOrders);
 	});
 
 	it('function work correctly :)))))', () => {
@@ -67,14 +68,7 @@ describe('sortOrders function', () => {
 
 		const copyOrders2 = myFakeOrders.map(a => Object.assign({}, a));
 
-		let equalFlag = true
-		for (let i = 0; i < myFakeOrders.length; i++) {
-
-			if (!(JSON.stringify(copyOrders1[i]) === JSON.stringify(copyOrders2[i]))) {
-				equalFlag = false
-			}
-		}
-		expect(equalFlag).toBe(true);
+		expect(copyOrders1).toEqual(copyOrders2);
 	});
 });
 
@@ -104,8 +98,8 @@ describe('sortByDate function', () => {
     });
 
 	test.each([
-		[{date: 2}, {date: 1}, -1],
-		[{date: 1}, {date: 2}, 1],
+		[{date: new Date("1996-12-17T03:24:00")}, {date: new Date("1995-12-17T03:24:00")}, -1],
+		[{date: new Date("1995-12-17T03:24:00")}, {date: new Date("1996-12-17T03:24:00")}, 1],
 		[{date: 1}, {date: 1}, 0],
 	])('.compare dates(%i, %i)', (a, b, expected) => {
 		expect(sortByDate(a, b)).toBe(expected);

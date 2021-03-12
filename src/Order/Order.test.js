@@ -42,9 +42,9 @@ describe('Order.js', () => {
       },
     };
 
-    const result = shallow(<Order {...data}/>);
+    const wrapper = shallow(<Order {...data}/>);
 
-    expect(result).toMatchSnapshot();
+    expect(wrapper.getElement()).toBeNull();
   });
 
   it('render with items null in data', () => {
